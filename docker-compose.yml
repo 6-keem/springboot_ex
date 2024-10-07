@@ -28,6 +28,9 @@ services:
       SPRING_DATASOURCE_PASSWORD: "t1234"
     depends_on:
       - mariadb
+    volumes:
+      - ./src/main/resources/application.yml:/app/config/application.yml
+    command: [ "java", "-jar", "app.jar", "--spring.config.location=file:/app/config/application.yml" ]
 
 networks:
   app-network:
