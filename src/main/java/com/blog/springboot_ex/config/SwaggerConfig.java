@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SwaggerConfig {
+
     @Bean
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi.builder()
@@ -20,8 +21,8 @@ public class SwaggerConfig {
     public OpenAPI openAPI() {
         Info info = new Info()
                 .version("v1.0")
-                .title("FiveGuys API")
-                .description("FiveGuys x Daou Purrio"); //설명
+                .title("TEST")
+                .description("Swagger-ui 테스트입니다.");
         return new OpenAPI()
                 .info(info);
     }
